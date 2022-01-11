@@ -1,0 +1,20 @@
+<section id="sidebar">
+    <nav>
+        <div class="sidebar-area">
+            <ng-container *ngIf="sidebarAction.length>0">
+                <ng-container *ngFor="let action of sidebarAction">
+                    <a [routerLink]="[action.url]" #rla="routerLinkActive"
+                        [ngStyle]="{'background-color':rla.isActive?activeColor:''}" routerLinkActive='active'
+                        class="sidebar-item d-flex align-items-center">
+                        <div class="sidebar-content">
+                            <h2 *ngIf="faqCount.name==action.name">{{faqCount.count}}</h2>
+                            <h2 *ngIf="ticketCount.name==action.name">{{ticketCount.count}}</h2>
+                            <h2 *ngIf="materialCount.name==action.name">{{materialCount.count}}</h2>
+                            <h4>{{action.name}}</h4>
+                        </div>
+                    </a>
+                </ng-container>
+            </ng-container>
+        </div>
+    </nav>
+</section>

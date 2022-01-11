@@ -1,0 +1,20 @@
+<button (click)="toggleNotification()" class="header-notification">
+    <img src="assets/icons/main-modules/notifications.svg" alt="notification-icon">
+    <div *ngIf="isNotificationOpen || openNotification" class="header-notification-content">
+        <perfect-scrollbar class="header-notification-scroll">
+            <div class="header-notification-item">
+                <p class="header-notification-item-text">
+                    Xoş gəlmisiniz,{{user.firstname}},sizin son girişiniz {{user.lastLoginDate}}
+                </p>
+            </div>
+            <div *ngFor="let notification of notifications" class="header-notification-item">
+                <p class="header-notification-item-text">
+                    {{notification.content}}
+                </p>
+                <span class="header-notification-item-date">
+                    {{notification.createDate}}
+                </span>
+            </div>
+        </perfect-scrollbar>
+    </div>
+</button>

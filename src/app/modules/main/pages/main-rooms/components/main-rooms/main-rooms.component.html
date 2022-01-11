@@ -1,0 +1,23 @@
+<div class="banner-area">
+    <app-banner [bannerMain]="true" [withInput]="true" [withAction]="true" (changeDataEvent)="openAddRoomModal()"
+        actionText1="Otaq tərtib edin " (updateDataEvent)="getConferenceRoomList($event)" bgImage="banner-main-bg.svg"
+        img='banner-main-img'></app-banner>
+</div>
+<div class="main-content">
+    <perfect-scrollbar class="main-scroll">
+        <div class="main-content-item-area">
+            <ngx-skeleton-loader *ngIf="loading" count="10"></ngx-skeleton-loader>
+            <ng-container *ngIf="!loading">
+                <app-main-room-item *ngFor="let roomItem of roomLists" [roomItem]="roomItem"
+                    (showParticipant)="showParticipantEvent($event)">
+                </app-main-room-item>
+            </ng-container>
+        </div>
+    </perfect-scrollbar>
+</div>
+<!-- <div *ngIf="participants!=null" class="main-participant-list">
+    <app-main-rooms-participant-dialog [participants]="participants" [roomItem]="clickedRoom"
+        (refreshRoomItemData)="showParticipantEvent($event)" (refreshRoomData)="getConferenceRoomList()"
+        (closeEvent)="showParticipant=false" *ngIf="showParticipant">
+    </app-main-rooms-participant-dialog>
+</div> -->

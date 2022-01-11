@@ -1,0 +1,14 @@
+<div class="main-meetings-item">
+    <button (click)="openDetails()" class="main-meetings-item-user-info">
+        <!-- <img *ngIf="meeting" src="assets/img/main/pp.svg" alt="pp"> -->
+        <div class="pp-by-name">
+            {{ meeting.userFullname[0] }}
+        </div>
+        <div class="main-meetings-item-info">
+            <h2>{{meeting.userFullname}}, <span>{{meeting.title}}</span>
+            </h2>
+            <p class="date">{{meeting.startDate}} {{meeting.startTime}}</p>
+        </div>
+    </button>
+    <a href="#">Daxil ol</a>
+</div>

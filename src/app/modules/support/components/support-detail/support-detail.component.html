@@ -1,0 +1,59 @@
+<ng-container *ngIf="loader">
+    <ngx-skeleton-loader count="5"></ngx-skeleton-loader>
+</ng-container>
+<ng-container *ngIf="!loader">
+    <ng-container *ngIf="survey!=null">
+        <div class="support-detail common-border">
+            <div class="support-detail-top d-flex align-items-center justify-content-between mb-2">
+                <div class="user-info-date d-flex">
+                    <div class="code-date-area d-flex">
+                        <div class="code" [ngStyle]="{'background-color':survey.typeColor}">
+                            <p>{{survey.ticketCode}} {{survey.typeShortName}}</p>
+                        </div>
+                        <!-- <div class="status" [ngClass]="survey.statusName|lowercase">
+                                <p>{{survey.statusName}}</p>
+                            </div> -->
+                    </div>
+                    <div class="date">
+                        <p>{{survey.createDate}}</p>
+                    </div>
+                </div>
+                <div class="code-date-area d-flex">
+                    <!-- <div class="code">
+                            <p>{{survey.ticketCode}}</p>
+                        </div> -->
+                    <div class="status" [ngStyle]="{'background-color':survey.statusColor}">
+                        <p>{{survey.statusName}}</p>
+                    </div>
+                </div>
+            </div>
+            <perfect-scrollbar class="scroll">
+                <div class="support-detail-content scroll">
+                    <p>{{survey.content}}
+                    </p>
+                </div>
+            </perfect-scrollbar>
+
+            <div class="support-detail-bottom">
+                <button (click)="update()" class="support-btn edit">Redaktə et</button>
+                <button (click)="remove()" class="support-btn remove">Sil</button>
+                <button class="support-btn comment">Rəy yaz</button>
+            </div>
+        </div>
+
+    </ng-container>
+
+    <ng-container *ngIf='faq!=null'>
+        <perfect-scrollbar class="scroll">
+            <div class="support-detail common-border">
+                <div class="support-detail-top d-flex align-items-center justify-content-between mb-2">
+
+                </div>
+                <div class="support-detail-content">
+                    <p>{{faq.answer}}</p>
+                </div>
+            </div>
+        </perfect-scrollbar>
+
+    </ng-container>
+</ng-container>

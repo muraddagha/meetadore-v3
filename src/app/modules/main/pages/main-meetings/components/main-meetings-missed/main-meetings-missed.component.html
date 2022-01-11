@@ -1,0 +1,11 @@
+<div class="main-content-item-area">
+    <ng-container *ngIf="meetingList!=null">
+        <ngx-skeleton-loader *ngIf="loader" count="10"></ngx-skeleton-loader>
+        <ng-container *ngIf="!loader">
+            <app-main-meetings-item *ngFor="let meeting of meetingList" [meeting]="meeting"></app-main-meetings-item>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="meetingList==null">
+        <app-no-data img="assets/img/nodata-main.svg"></app-no-data>
+    </ng-container>
+</div>

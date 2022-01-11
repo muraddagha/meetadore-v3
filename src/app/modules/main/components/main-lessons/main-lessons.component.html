@@ -1,0 +1,33 @@
+<ngx-skeleton-loader *ngIf="loader" count="10"></ngx-skeleton-loader>
+<ng-container *ngIf="!loader">
+    <div class="select-container">
+        <span>{{ 'Cari dərslər' }} ({{ studentTranscripts?.length }})</span>
+        <div class="uomg-left">
+            {{ getWeekCharge() }} {{ 'saat' }}
+        </div>
+    </div>
+    <div class="main-lesson-item-area">
+        <div class="main-lesson-item" *ngFor="let transcript of studentTranscripts">
+            <div class="main-lesson-item-info">
+                <h4>{{transcript.subjectName}}</h4>
+                <p>{{transcript.courseCode}}</p>
+            </div>
+            <div class="main-lesson-item-info">
+                <h4>{{transcript.weekCharge||0}}</h4>
+                <p>saat</p>
+            </div>
+            <div class="main-lesson-item-info">
+                <h4>{{transcript.firstHalfPoint}}</h4>
+                <p>1ci y.i yekun</p>
+            </div>
+            <div class="main-lesson-item-info">
+                <h4>{{transcript.secondHalfPoint}}</h4>
+                <p>2ci y.i yekun</p>
+            </div>
+            <div class="main-lesson-item-info">
+                <h4>{{transcript.endPoint}}</h4>
+                <p>illik yekun</p>
+            </div>
+        </div>
+    </div>
+</ng-container>

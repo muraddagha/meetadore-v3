@@ -1,0 +1,11 @@
+<div class="weather-text-info" *ngIf="weather?.weather">
+    <div class="location">{{ city }}, {{ country }}</div>
+    <div class="today">{{ today }}</div>
+    <div class="name">Xoş gəldiniz, {{user.firstname +" " +user.lastname}}</div>
+    <div class="weather-description">
+        {{weather?.weather[0].description|titlecase}}
+    </div>
+</div>
+<div class="weather-info">
+    <img src="assets/img/main/main-sun.svg" alt="Sunny weather" /><span>{{ niceTemp(weather?.main.temp) }}°</span>
+</div>

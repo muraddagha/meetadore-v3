@@ -1,0 +1,11 @@
+<div class="banner-area">
+    <app-banner [bannerMain]="true" [withInput]="true" [withAction]="true" (changeDataEvent)="openAddModal()"
+        actionText1="Görüş tərtib edin" bgImage="banner-main-bg.svg" img='banner-main-img'></app-banner>
+</div>
+<div class="main-content">
+    <app-main-sidebar></app-main-sidebar>
+    <perfect-scrollbar class="main-scroll-with-small-nav">
+        <router-outlet></router-outlet>
+    </perfect-scrollbar>
+
+</div>

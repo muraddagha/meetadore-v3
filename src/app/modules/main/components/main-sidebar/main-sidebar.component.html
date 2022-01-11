@@ -1,0 +1,62 @@
+<section id="sidebar">
+    <nav>
+        <div class="sidebar-area">
+            <ng-container *ngIf="sidebarAction.length>0">
+                <div class="sidebar-content-tablet-desktop">
+                    <ng-container *ngFor="let action of sidebarAction">
+                        <a [routerLink]="[action.url]" #rla="routerLinkActive"
+                            [ngStyle]="{'background-color':rla.isActive?activeColor:''}" routerLinkActive='active'
+                            class="sidebar-item d-flex align-items-center">
+                            <div class="sidebar-content sidebar-content-big">
+                                <h2 *ngIf="faqCount.name==action.name">{{faqCount.count}}</h2>
+                                <h2 *ngIf="ticketCount.name==action.name">{{ticketCount.count}}</h2>
+                                <h2 *ngIf="materialCount.name==action.name">{{materialCount.count}}</h2>
+                                <h4>{{action.name}}</h4>
+                            </div>
+                        </a>
+                    </ng-container>
+                </div>
+                <div class="sidebar-content-mobile">
+                    <a [matMenuTriggerFor]="menu" [ngStyle]="{'background-color':activeColor}"
+                        class="sidebar-item d-flex align-items-center active">
+                        <ng-container *ngIf="activeAction==null">
+                            {{sidebarAction|getFirstSidebarAction}}
+                            <span *ngIf="faqCount.name==(sidebarAction|getFirstSidebarAction)">
+                                ({{faqCount.count}})
+                            </span>
+                            <span *ngIf="ticketCount.name==(sidebarAction|getFirstSidebarAction)">
+                                ({{ticketCount.count}})
+                            </span>
+                            <span *ngIf="materialCount.name==(sidebarAction|getFirstSidebarAction)">
+                                ({{materialCount.count}})
+                            </span>
+                        </ng-container>
+                        <ng-container *ngIf="activeAction!=null">
+                            {{activeAction}}
+                            <span *ngIf="faqCount.name==activeAction">
+                                ({{faqCount.count}})
+                            </span>
+                            <span *ngIf="ticketCount.name==activeAction">
+                                ({{ticketCount.count}})
+                            </span>
+                            <span *ngIf="materialCount.name==activeAction">
+                                ({{materialCount.count}})
+                            </span>
+                        </ng-container>
+                        <img class="ms-2" src="assets/icons/polygon.svg" alt="polygon">
+                    </a>
+                </div>
+            </ng-container>
+        </div>
+    </nav>
+</section>
+<mat-menu #menu="matMenu">
+    <ul class="mat-popup">
+        <li *ngFor="let action of sidebarAction" class="header-nav-popup-item">
+            <a (click)="getActiveSidebarAction(action)" [routerLink]="action.url">
+                <img src="assets/icons/main-modules/{{action.icon}}.svg" alt="">
+                {{action.name}}
+            </a>
+        </li>
+    </ul>
+</mat-menu>

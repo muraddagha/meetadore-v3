@@ -1,0 +1,72 @@
+<div class="details common-border">
+    <div class="details-header">
+        <div class="details-user">
+            <div class="details-user-info">
+                <img src="assets/img/board-pp.png" alt="detail-pp">
+                <span>{{roomItem.moderatorFullname}}</span>
+            </div>
+            <div class="details-user-close">
+                <button (click)="closeParticipantDetail()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+            </div>
+        </div>
+        <h2 class="details-title">
+            {{roomItem.name}}
+        </h2>
+        <div class="details-tab-actions common-border">
+            <button class="active">İştirakçılar</button>
+            <button></button>
+            <button></button>
+            <button class="text-end" mat-button [matMenuTriggerFor]="menu"><img src="assets/img/main/info-icon.svg"
+                    alt="info-icon"></button>
+        </div>
+        <div class="details-user-actions" *ngIf="addParticipantAction">
+            <form class="form-area" [formGroup]="form" (ngSubmit)="submit()">
+                <mat-select placeholder="Kontaktlar" formControlName="userId">
+                    <mat-option>
+                        <ngx-mat-select-search placeholderLabel="İştirakçı axtar"></ngx-mat-select-search>
+                    </mat-option>
+                    <mat-option *ngFor="let filter of roomFilters" [value]="filter.id">
+                        {{filter.userFullname}}
+                    </mat-option>
+                </mat-select>
+                <button type="submit" class="add-user-btn">Əlavə et</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="details-body common-border">
+        <div *ngFor="let participant of participants" class="details-body-item">
+            <div class="details-body-item-info">
+                <span>1</span>
+                <div class="details-img-content">
+                    <img src="assets/img/board-item-img.png" alt="board-item">
+                    <p>{{participant.userFullname}}</p>
+                </div>
+            </div>
+            <div *ngIf="participant.userId!=participant.createUserId" class="details-body-item-action">
+                <button (click)="removeParticipant(participant)">
+                    <img src="assets/img/main/remove-participant.svg" alt="remove-participant">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-menu #menu="matMenu">
+    <div class="mat-menu-body">
+        <ul class="mat-popup">
+            <li>
+                <button (click)="openUpdateModal()">Redaktə et</button>
+            </li>
+            <li>
+                <button (click)="removeRoom()">Otağı sil</button>
+            </li>
+            <li>
+                <button (click)="addParticipant()">İştirakçı əlavə et</button>
+            </li>
+            <li>
+                <button>Linki kopyala</button>
+            </li>
+        </ul>
+    </div>
+
+</mat-menu>

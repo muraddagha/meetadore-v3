@@ -1,0 +1,31 @@
+<div class="main-content-item">
+    <div class="main-content-item-header">
+        <div class="main-content-user-info">
+            <img *ngIf="announcement?.createUserPhotoFileId!=null && announcement?.createUserPhotoFileId!='0'"
+                src="{{announcement?.createUserPhotoFileId|imgSrc}}" onerror="this.src='assets/img/user-pp.png'" alt="">
+            <div class="pp-by-name" *ngIf="announcement?.createUserPhotoFileId === '0'">
+                {{ announcement?.createUserFullname[0] }}
+            </div>
+            <div class="user-profile-info">
+                <h2>{{announcement?.createUserFullname}}</h2>
+                <p>{{announcement?.createUserPositionName}} </p>
+            </div>
+        </div>
+        <div class="main-content-date">
+            <div class="date">
+                <p>{{announcement?.createDate}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-content-item-body">
+        <p>
+            {{announcement?.content}}
+            Qeydiyyat linki: <a href="{{announcement?.fileId|imgSrc}}">
+                https://docs.google.com/forms/u/0/
+            </a>
+        </p>
+    </div>
+    <div class="main-content-item-footer">
+        <a href="#">differensial.pdf</a>
+    </div>
+</div>

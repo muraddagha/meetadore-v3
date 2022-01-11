@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="col-xl-3 content-big">
+        <perfect-scrollbar class="main-scroll">
+            <app-main-weather [user]="user" [today]="today"></app-main-weather>
+            <app-main-lessons *ngIf="checkIsUserHasComponent(mainComponents.Lessons)"></app-main-lessons>
+        </perfect-scrollbar>
+
+    </div>
+    <div class="col-xl-6 col-md-7 col-12">
+        <app-main-top-sidebar></app-main-top-sidebar>
+
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-xl-3 col-md-5 col-12">
+        <perfect-scrollbar class="main-scroll">
+            <app-main-today-schedule *ngIf="checkIsUserHasComponent(mainComponents.Schedule)" [today]="today">
+            </app-main-today-schedule>
+            <app-main-homeworks *ngIf="checkIsUserHasComponent(mainComponents.Homeworks)"></app-main-homeworks>
+        </perfect-scrollbar>
+
+
+    </div>
+</div>

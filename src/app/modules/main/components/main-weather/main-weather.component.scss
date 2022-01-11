@@ -1,0 +1,54 @@
+:host {
+    padding: var(--base-gutter);
+    display: none;
+    background: rgba(47, 128, 237, 0.1);
+    border-radius: 7px;
+    width: 100%;
+    color: #000;
+    margin-bottom: var(--base-gutter);
+    &.ready {
+        display: flex;
+    }
+}
+.weather-text-info {
+    width: 100%;
+}
+.location {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 1px;
+}
+.today {
+    font-size: 12px;
+    line-height: var(--base-gutter);
+}
+.name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    margin-top: 28px;
+}
+.weather-description {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: var(--base-gutter);
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    span {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+}

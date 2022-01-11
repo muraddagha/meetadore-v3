@@ -1,0 +1,60 @@
+<nav class="header-nav">
+    <div class="header-nav-big">
+        <ng-container *ngFor="let module of headerNavModules">
+            <a *ngIf="!checkThisAppModules(module.url)" [routerLink]="[module.url]" routerLinkActive="active">
+                <img src="assets/icons/main-modules/{{module.icon}}.svg" alt="home-icon">
+                {{module.name.az}}
+            </a>
+            <a *ngIf="checkThisAppModules(module.url)" href="{{module.urlRedirect}}" routerLinkActive="active">
+                <img src="assets/icons/main-modules/{{module.icon}}.svg" alt="home-icon">
+                {{module.name.az}}
+            </a>
+        </ng-container>
+
+        <button mat-button [matMenuTriggerFor]="menuBig">
+            <img src="assets/icons/main-modules/more.svg" alt="modal-icon">
+        </button>
+    </div>
+    <div class="header-nav-small">
+        <button mat-button [matMenuTriggerFor]="menuSmall">
+            <img src="assets/icons/main-modules/more-mobile.svg" alt="modal-icon">
+        </button>
+    </div>
+</nav>
+<mat-menu #menuBig="matMenu">
+    <ul class="mat-popup">
+        <ng-container *ngFor="let popupModule of popupModules">
+            <li *ngIf="!checkThisAppModules(popupModule.url)" class="header-nav-popup-item">
+                <a [routerLink]="popupModule.url">
+                    <img src="assets/icons/main-modules/{{popupModule.icon}}.svg" alt="">
+                    {{popupModule.name.az}}
+                </a>
+            </li>
+            <li *ngIf="checkThisAppModules(popupModule.url)" class="header-nav-popup-item">
+                <a href="{{popupModule.urlRedirect}}">
+                    <img src="assets/icons/main-modules/{{popupModule.icon}}.svg" alt="">
+                    {{popupModule.name.az}}
+                </a>
+            </li>
+        </ng-container>
+
+    </ul>
+</mat-menu>
+<mat-menu #menuSmall="matMenu">
+    <ul class="mat-popup">
+        <ng-container *ngFor="let popupModule of allModules">
+            <li *ngIf="!checkThisAppModules(popupModule.url)" class="header-nav-popup-item">
+                <a [routerLink]="popupModule.url">
+                    <img src="assets/icons/main-modules/{{popupModule.icon}}.svg" alt="">
+                    {{popupModule.name.az}}
+                </a>
+            </li>
+            <li *ngIf="checkThisAppModules(popupModule.url)" class="header-nav-popup-item">
+                <a href="{{popupModule.urlRedirect}}">
+                    <img src="assets/icons/main-modules/{{popupModule.icon}}.svg" alt="">
+                    {{popupModule.name.az}}
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</mat-menu>

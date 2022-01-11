@@ -1,0 +1,19 @@
+<div class="content">
+    <div class="wrapper">
+        <div class="col-xl-3 content-big">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-xl-6 col-md-7 col-12">
+            <div class="content-small">
+                <app-sidebar></app-sidebar>
+            </div>
+            <app-banner [withInput]="true" [withAction]='true' actionText1='Oyun əlavə edin' actionText2='Yenilə'
+                bgImage='banner-board.svg' img="board-img"></app-banner>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-xl-3 col-md-5 col-12">
+            <!-- <app-board-details></app-board-details> -->
+            <app-details></app-details>
+        </div>
+    </div>
+</div>

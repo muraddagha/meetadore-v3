@@ -1,0 +1,18 @@
+<div class="main-right-item" [ngStyle]="{'background-color':homework?.cardColor}">
+    <div class="main-right-item-content">
+        <div class="main-right-item-info">
+            <h2>{{homework?.subjectName}}</h2>
+            <p>{{homework?.topicName}}</p>
+        </div>
+        <div class="main-right-item-info">
+            <h4>Tapşırıq: <a href="#" class="small-info show">Göstər</a></h4>
+            <p>Deadline: <span class="small-info late">{{homework?.endDate}}</span></p>
+        </div>
+    </div>
+
+    <div class="main-right-item-footer">
+        <!-- <img src="assets/img/main/check.svg" alt="check"> -->
+        <img src="assets/img/main/warning.svg" alt="check">
+        <h6>Ev tapşırığı yüklənilməyib</h6>
+    </div>
+</div>

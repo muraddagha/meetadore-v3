@@ -1,0 +1,27 @@
+#sidebar {
+  .sidebar-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    .sidebar-item {
+      padding-block: 20px;
+      padding-left: 60px;
+      border-radius: 5px;
+      min-height: 100px;
+      background-color: rgba(242, 242, 242, 1);
+      color: black;
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &.active {
+        background-color: rgba(86, 204, 242, 1);
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,712 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meetdore documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meetdore documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SupportSidebarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/support/components/support-sidebar/support-sidebar.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-support-sidebar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./support-sidebar.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./support-sidebar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#activeColor" >activeColor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#faqCount" >faqCount</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#materialCount" >materialCount</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sidebarAction" >sidebarAction</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ticketCount" >ticketCount</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getCounts" >getCounts</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, sidebarApiService: <a href="../injectables/SidebarApiService.html" target="_self">SidebarApiService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sidebarApiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SidebarApiService.html" target="_self" >SidebarApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCounts"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getCounts</b></span>
+                        <a href="#getCounts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCounts()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activeColor"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>activeColor</b></span>
+                        <a href="#activeColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:12</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faqCount"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>faqCount</b></span>
+                        <a href="#faqCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ICountModel.html" target="_self" >ICountModel</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ name: &#x27;&#x27;, count: &#x27;&#x27; }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="materialCount"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>materialCount</b></span>
+                        <a href="#materialCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ICountModel.html" target="_self" >ICountModel</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ name: &#x27;&#x27;, count: &#x27;&#x27; }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sidebarAction"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>sidebarAction</b></span>
+                        <a href="#sidebarAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ticketCount"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>ticketCount</b></span>
+                        <a href="#ticketCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ICountModel.html" target="_self" >ICountModel</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ name: &#x27;&#x27;, count: &#x27;&#x27; }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/support/components/support-sidebar/support-sidebar.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router, NavigationEnd } from &#x27;@angular/router&#x27;;
+import { ICountModel } from &#x27;src/app/components/layout/models/count.model&#x27;;
+import { SidebarApiService } from &#x27;src/app/components/layout/services/sidebar-api.service&#x27;;
+
+@Component({
+  selector: &#x27;app-support-sidebar&#x27;,
+  templateUrl: &#x27;./support-sidebar.component.html&#x27;,
+  styleUrls: [&#x27;./support-sidebar.component.scss&#x27;],
+})
+export class SupportSidebarComponent implements OnInit {
+  public activeColor: any;
+  public sidebarAction: any[] &#x3D; [];
+  public faqCount: ICountModel &#x3D; { name: &#x27;&#x27;, count: &#x27;&#x27; };
+  public ticketCount: ICountModel &#x3D; { name: &#x27;&#x27;, count: &#x27;&#x27; };
+  public materialCount: ICountModel &#x3D; { name: &#x27;&#x27;, count: &#x27;&#x27; };
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private sidebarApiService: SidebarApiService
+  ) {
+    this.faqCount.name &#x3D; &#x27;Faq&#x27;;
+    this.materialCount.name &#x3D; &#x27;Təlimləndirici materiallar&#x27;;
+    this.ticketCount.name &#x3D; &#x27;Sorğu&#x27;;
+    this.router.events.subscribe((event) &#x3D;&gt; {
+      if (event instanceof NavigationEnd) {
+        if (this.activatedRoute.firstChild !&#x3D; null) {
+          this.activatedRoute.data.subscribe((res) &#x3D;&gt; {
+            if (res !&#x3D; null || res !&#x3D; undefined) {
+              this.activeColor &#x3D; res[&#x27;activeColor&#x27;];
+              this.sidebarAction &#x3D; res[&#x27;sidebarAction&#x27;];
+            }
+          });
+        }
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.getCounts();
+  }
+
+  private getCounts() {
+    this.sidebarApiService.getCounts().subscribe((res) &#x3D;&gt; {
+      this.faqCount.count &#x3D; res.FAQ_COUNT;
+      this.ticketCount.count &#x3D; res.TICKET_COUNT;
+      this.materialCount.count &#x3D; res.TRAINING_MATERIAL_COUNT;
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section id&#x3D;&quot;sidebar&quot;&gt;
+    &lt;nav&gt;
+        &lt;div class&#x3D;&quot;sidebar-area&quot;&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;sidebarAction.length&gt;0&quot;&gt;
+                &lt;ng-container *ngFor&#x3D;&quot;let action of sidebarAction&quot;&gt;
+                    &lt;a [routerLink]&#x3D;&quot;[action.url]&quot; #rla&#x3D;&quot;routerLinkActive&quot;
+                        [ngStyle]&#x3D;&quot;{&#x27;background-color&#x27;:rla.isActive?activeColor:&#x27;&#x27;}&quot; routerLinkActive&#x3D;&#x27;active&#x27;
+                        class&#x3D;&quot;sidebar-item d-flex align-items-center&quot;&gt;
+                        &lt;div class&#x3D;&quot;sidebar-content&quot;&gt;
+                            &lt;h2 *ngIf&#x3D;&quot;faqCount.name&#x3D;&#x3D;action.name&quot;&gt;{{faqCount.count}}&lt;/h2&gt;
+                            &lt;h2 *ngIf&#x3D;&quot;ticketCount.name&#x3D;&#x3D;action.name&quot;&gt;{{ticketCount.count}}&lt;/h2&gt;
+                            &lt;h2 *ngIf&#x3D;&quot;materialCount.name&#x3D;&#x3D;action.name&quot;&gt;{{materialCount.count}}&lt;/h2&gt;
+                            &lt;h4&gt;{{action.name}}&lt;/h4&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./support-sidebar.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#sidebar {
+  .sidebar-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    .sidebar-item {
+      padding-block: 20px;
+      padding-left: 60px;
+      border-radius: 5px;
+      min-height: 100px;
+      background-color: rgba(242, 242, 242, 1);
+      color: black;
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &amp;.active {
+        background-color: rgba(86, 204, 242, 1);
+        color: white;
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section id="sidebar">    <nav>        <div class="sidebar-area">            <ng-container *ngIf="sidebarAction.length>0">                <ng-container *ngFor="let action of sidebarAction">                    <a [routerLink]="[action.url]" #rla="routerLinkActive"                        [ngStyle]="{\'background-color\':rla.isActive?activeColor:\'\'}" routerLinkActive=\'active\'                        class="sidebar-item d-flex align-items-center">                        <div class="sidebar-content">                            <h2 *ngIf="faqCount.name==action.name">{{faqCount.count}}</h2>                            <h2 *ngIf="ticketCount.name==action.name">{{ticketCount.count}}</h2>                            <h2 *ngIf="materialCount.name==action.name">{{materialCount.count}}</h2>                            <h4>{{action.name}}</h4>                        </div>                    </a>                </ng-container>            </ng-container>        </div>    </nav></section></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AboutGeneralComponent', 'selector': 'app-about-general'},{'name': 'AboutTermsComponent', 'selector': 'app-about-terms'},{'name': 'AboutVersionComponent', 'selector': 'app-about-version'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'BoardCurrentComponent', 'selector': 'app-board-current'},{'name': 'BoardDetailsComponent', 'selector': 'app-board-details'},{'name': 'BoardPastComponent', 'selector': 'app-board-past'},{'name': 'BoardQuestionsComponent', 'selector': 'app-board-questions'},{'name': 'ConfrimDialogComponent', 'selector': 'app-confrim-dialog'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderNavComponent', 'selector': 'app-header-nav'},{'name': 'HeaderNotificationComponent', 'selector': 'app-header-notification'},{'name': 'HeaderUserComponent', 'selector': 'app-header-user'},{'name': 'HeaderUserNotificationComponent', 'selector': 'app-header-user-notification'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'ModuleContentComponent', 'selector': 'app-module-content'},{'name': 'ModulesComponent', 'selector': 'app-modules'},{'name': 'NoDataComponent', 'selector': 'app-no-data'},{'name': 'PieChartComponent', 'selector': 'app-pie-chart'},{'name': 'ReportCommonComponent', 'selector': 'app-report-common'},{'name': 'ReportComponent', 'selector': 'app-report'},{'name': 'ReportDetailComponent', 'selector': 'app-report-detail'},{'name': 'ReportPieChartComponent', 'selector': 'app-report-pie-chart'},{'name': 'ReportStatisticComponent', 'selector': 'app-report-statistic'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SupportAddQuestionComponent', 'selector': 'app-support-add-question'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'SupportDetailComponent', 'selector': 'app-support-detail'},{'name': 'SupportFaqComponent', 'selector': 'app-support-faq'},{'name': 'SupportMaterialsComponent', 'selector': 'app-support-materials'},{'name': 'SupportSidebarComponent', 'selector': 'app-support-sidebar'},{'name': 'SupportSurveyComponent', 'selector': 'app-support-survey'},{'name': 'VideoDialogComponent', 'selector': 'app-video-dialog'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SupportSidebarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupportSidebarComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

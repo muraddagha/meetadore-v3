@@ -1,0 +1,21 @@
+.report-common-area {
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+    height: 400px;
+    .report-common-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #f2f2f2;
+        border-radius: 5px;
+        padding: 25px 15px;
+        .report-common-item-icon-text {
+            display: flex;
+            column-gap: 15px;
+            font-size: 14px;
+            align-items: center;
+            color: #000000;
+        }
+    }
+}

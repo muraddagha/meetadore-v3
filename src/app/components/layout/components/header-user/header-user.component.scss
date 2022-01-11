@@ -1,0 +1,26 @@
+button {
+  width: initial;
+  padding: 0;
+}
+.header-user-btn {
+  display: flex;
+  align-items: center;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    margin-left: 15px;
+  }
+}
+figure {
+  background: #ddd;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: var(--base-gutter);
+  margin: 0;
+}

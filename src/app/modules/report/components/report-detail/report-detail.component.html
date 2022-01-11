@@ -1,0 +1,749 @@
+<ng-container #library *ngIf="reportDetailType==0">
+    <div class="report-detail">
+        <div class="report-detail-header">
+            <div class="report-detail-title">
+                <img src="assets/icons/report-icon.svg" alt="report-icon">
+                <h2>Kitabxana resurslarına müraciətlər</h2>
+            </div>
+            <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+        </div>
+
+        <div class="report-detail-content">
+            <h2 style="text-align: center;"> <ins> Şuşa Dövlət məktəbi </ins> </h2>
+            <h3 style="text-align: center;">Kitabxanadakı resursa görə olan müraciətlər</h3>
+            <table>
+                <tr>
+                    <th rowspan="2">№</th>
+                    <th rowspan="2">Tələbə</th>
+                    <th rowspan="2">Resurs</th>
+                    <th rowspan="2">Müəllifin adı </th>
+                    <th colspan="3">Müraciət</th>
+                    <th rowspan="2">Cərimə səbəbi</th>
+                    <th rowspan="2">Cərimə məbləği</th>
+                    <th rowspan="2">Ödənilən cərimə </th>
+                <tr>
+                    <th>Götürülmə vaxtı</th>
+                    <th>Bitmə vaxtı</th>
+                    <th>Qaytarıldı</th>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">Abbaszadə Gursel Üzeyir</td>
+                    <td class="center">Gülüstan</td>
+                    <td class="center">Bəxtiyar Vahabzadə</td>
+                    <td class="center">16/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;22/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td class="center">Hüseynov Röyal Rövşən</td>
+                    <td class="center">Yenidən Başlamaq Mümkün Olsaydı</td>
+                    <td class="center">Mark Levi</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;27/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">5</td>
+                </tr>
+                <tr>
+                    <td class="center">3</td>
+                    <td class="center">Əliyeva Pəri Aftandil</td>
+                    <td class="center">Həbsiyyə</td>
+                    <td class="center">Xaqani Şirvani</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;26/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Kitab yarasız olduğuna görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">4</td>
+                    <td class="center">Abbasov Orxan Babək</td>
+                    <td class="center">Sirlər xəzinəsi</td>
+                    <td class="center">Nizami Gəncəvi</td>
+                    <td class="center">21/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;22/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">5</td>
+                    <td class="center">Mikayılova Alsu Arif</td>
+                    <td class="center">Dəhnamə</td>
+                    <td class="center">Şah İsmayıl Xətayi</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;25/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">6</td>
+                    <td class="center">Nezerov Zaman Elxan</td>
+                    <td class="center">Pəri</td>
+                    <td class="center">Molla Pənah Vaqif</td>
+                    <td class="center">12/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;15/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;17/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">7</td>
+                    <td class="center">Ağamətov İqramin Elxan</td>
+                    <td class="center">Ferrarisini Satan Rahib</td>
+                    <td class="center">Robin Şarma</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;26/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">8</td>
+                    <td class="center">Amanov Qadir Ayaz</td>
+                    <td class="center">Dağlar</td>
+                    <td class="center">Aşıq Ələsgər</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;26/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">9</td>
+                    <td class="center">Ağayev Elxan Amir</td>
+                    <td class="center">Leyli və Məcnun</td>
+                    <td class="center">Məhəmməd Fuzuli</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;26/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">10</td>
+                    <td class="center">Abbaszadə Gursel Üzeyir</td>
+                    <td class="center">Gülüstan</td>
+                    <td class="center">Bəxtiyar Vahabzadə</td>
+                    <td class="center">16/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;22/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">11</td>
+                    <td class="center">Hüseynov Röyal Rövşən</td>
+                    <td class="center">Yeddi Gözəl</td>
+                    <td class="center">Nizami Gəncəvi</td>
+                    <td class="center">14/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;27/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;28/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">5</td>
+                </tr>
+                <tr>
+                    <td class="center">12</td>
+                    <td class="center">Əliyeva Pəri Aftandil</td>
+                    <td class="center">Aldanmiş kəvakib</td>
+                    <td class="center">M.F.Axundzadə</td>
+                    <td class="center">24/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;26/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;24/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Kitab yarasız olduğuna görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+                <tr>
+                    <td class="center">13</td>
+                    <td class="center">Abbasov Orxan Babək</td>
+                    <td class="center">Itirilmiş Simvol</td>
+                    <td class="center">Dan Brown</td>
+                    <td class="center">21/12/2020</td>
+                    <td class="center">&nbsp;&nbsp;22/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">&nbsp;&nbsp;26/12/2020&nbsp;&nbsp;</td>
+                    <td class="center">Gecikdirdiyinə görə</td>
+                    <td class="center">10</td>
+                    <td class="center">10</td>
+                </tr>
+            </table>
+            <p> <b> Kitabxana əməkdaşı </b> <ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins></p>
+        </div>
+    </div>
+</ng-container>
+<ng-container #total *ngIf="reportDetailType==1">
+    <div class="report-detail">
+        <div class="report-detail-header">
+            <div class="report-detail-title">
+                <img src="assets/icons/report-icon.svg" alt="report-icon">
+                <h2>İllik yekun nəticələri</h2>
+            </div>
+            <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+        </div>
+
+        <div class="report-detail-content">
+            <h2 class="center"> <ins> Şuşa Dövlət məktəbi </ins> </h2>
+            <h3 class="center">2020/2021 - ci təhsil ilinin yekun nəticələri barədə</h3>
+            <h2 class="center">Məlumat</h2>
+            <p> <b> Şagirdin adı : </b> Əlizadə Həsən Bəhram</p>
+            <p> <b> Sinif : </b> 7c </p>
+            <table>
+                <tr>
+                    <th rowspan="3">N</th>
+                    <th rowspan="3">Dərsin adı</th>
+                    <th rowspan="3">Müəllim</th>
+                    <th colspan="5">I yarımil</th>
+                    <th colspan="5">II yarımil</th>
+                    <th rowspan="3">Yekun</th>
+                </tr>
+                <tr>
+                    <th colspan="3">&nbsp;&nbsp;Kiçik summativ qiymətləndirmə&nbsp;&nbsp;</th>
+                    <th rowspan="2">&nbsp;&nbsp;BSQ&nbsp;&nbsp;</th>
+                    <th rowspan="2">Yarım- <br> illik</th>
+                    <th colspan="3">&nbsp;&nbsp;Kiçik summativ qiymətləndirmə&nbsp;&nbsp;</th>
+                    <th rowspan="2">&nbsp;&nbsp;BSQ&nbsp;&nbsp;</th>
+                    <th rowspan="2">Yarım- <br> illik</th>
+                </tr>
+                <tr>
+                    <th>KSQ-1</th>
+                    <th>KSQ-2</th>
+                    <th>KSQ-3</th>
+                    <th>KSQ-1</th>
+                    <th>KSQ-2</th>
+                    <th>KSQ-3</th>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">Azərbaycan dili</td>
+                    <td class="center">Rəfiyeva Leyla Z.</td>
+                    <td class="center">45</td>
+                    <td class="center">50</td>
+                    <td class="center">40</td>
+                    <td class="center">70</td>
+                    <td class="center">85</td>
+                    <td class="center">35</td>
+                    <td class="center">45</td>
+                    <td class="center">50</td>
+                    <td class="center">60</td>
+                    <td class="center">72</td>
+                    <td class="center">79</td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td class="center">Fizika</td>
+                    <td class="center">Məmmədov Əziz B.</td>
+                    <td class="center">42</td>
+                    <td class="center">48</td>
+                    <td class="center">47</td>
+                    <td class="center">58</td>
+                    <td class="center">77</td>
+                    <td class="center">44</td>
+                    <td class="center">26</td>
+                    <td class="center">30</td>
+                    <td class="center">48</td>
+                    <td class="center">74</td>
+                    <td class="center">76</td>
+                </tr>
+                <tr>
+                    <td class="center">3</td>
+                    <td class="center">Kimya</td>
+                    <td class="center">Əfəndiyev Fikrət M.</td>
+                    <td class="center">68</td>
+                    <td class="center">65</td>
+                    <td class="center">60</td>
+                    <td class="center">60</td>
+                    <td class="center">98</td>
+                    <td class="center">48</td>
+                    <td class="center">67</td>
+                    <td class="center">74</td>
+                    <td class="center">70</td>
+                    <td class="center">86</td>
+                    <td class="center">92</td>
+                </tr>
+                <tr>
+                    <td class="center">4</td>
+                    <td class="center">Azərbaycan tarixi</td>
+                    <td class="center">Orucov Arif K.</td>
+                    <td class="center">74</td>
+                    <td class="center">47</td>
+                    <td class="center">49</td>
+                    <td class="center">58</td>
+                    <td class="center">90</td>
+                    <td class="center">47</td>
+                    <td class="center">47</td>
+                    <td class="center">52</td>
+                    <td class="center">69</td>
+                    <td class="center">86</td>
+                    <td class="center">84</td>
+                </tr>
+                <tr>
+                    <td class="center">5</td>
+                    <td class="center">İngilis dili</td>
+                    <td class="center">İsmayılov Rövşən R.</td>
+                    <td class="center">69</td>
+                    <td class="center">60</td>
+                    <td class="center">78</td>
+                    <td class="center">87</td>
+                    <td class="center">99</td>
+                    <td class="center">74</td>
+                    <td class="center">70</td>
+                    <td class="center">77</td>
+                    <td class="center">73</td>
+                    <td class="center">74</td>
+                    <td class="center">75</td>
+                </tr>
+                <tr>
+                    <td class="center">6</td>
+                    <td class="center">Biologiya</td>
+                    <td class="center">Əfəndiyeva Lalə R.</td>
+                    <td class="center">70</td>
+                    <td class="center">79</td>
+                    <td class="center">62</td>
+                    <td class="center">74</td>
+                    <td class="center">87</td>
+                    <td class="center">95</td>
+                    <td class="center">89</td>
+                    <td class="center">88</td>
+                    <td class="center">87</td>
+                    <td class="center">75</td>
+                    <td class="center">85</td>
+                </tr>
+                <tr>
+                    <td class="center">7</td>
+                    <td class="center">Riyaziyyat</td>
+                    <td class="center">Mürsəlov Rizvan C.</td>
+                    <td class="center">74</td>
+                    <td class="center">47</td>
+                    <td class="center">49</td>
+                    <td class="center">69</td>
+                    <td class="center">84</td>
+                    <td class="center">47</td>
+                    <td class="center">47</td>
+                    <td class="center">54</td>
+                    <td class="center">69</td>
+                    <td class="center">71</td>
+                    <td class="center">86</td>
+                </tr>
+                <tr>
+                    <td class="center">8</td>
+                    <td class="center">Ədəbiyyat</td>
+                    <td class="center">Həmidov Sabir İ.</td>
+                    <td class="center">71</td>
+                    <td class="center">47</td>
+                    <td class="center">49</td>
+                    <td class="center">58</td>
+                    <td class="center">82</td>
+                    <td class="center">87</td>
+                    <td class="center">69</td>
+                    <td class="center">52</td>
+                    <td class="center">67</td>
+                    <td class="center">76</td>
+                    <td class="center">83</td>
+                </tr>
+                <tr>
+                    <td class="center">9</td>
+                    <td class="center">Həndəsə</td>
+                    <td class="center">Talıbov Səxavət Q.</td>
+                    <td class="center">48</td>
+                    <td class="center">89</td>
+                    <td class="center">80</td>
+                    <td class="center">60</td>
+                    <td class="center">87</td>
+                    <td class="center">56</td>
+                    <td class="center">64</td>
+                    <td class="center">42</td>
+                    <td class="center">75</td>
+                    <td class="center">74</td>
+                    <td class="center">88</td>
+                </tr>
+                <tr>
+                    <td class="center">10</td>
+                    <td class="center">Dünya tarixi</td>
+                    <td class="center">Həsənov Feyruz M.</td>
+                    <td class="center">49</td>
+                    <td class="center">41</td>
+                    <td class="center">50</td>
+                    <td class="center">69</td>
+                    <td class="center">87</td>
+                    <td class="center">68</td>
+                    <td class="center">47</td>
+                    <td class="center">54</td>
+                    <td class="center">69</td>
+                    <td class="center">87</td>
+                    <td class="center">82</td>
+                </tr>
+                <tr>
+                    <td class="center">11</td>
+                    <td class="center">Musiqi</td>
+                    <td class="center">Abbasova Aygün X.</td>
+                    <td class="center">98</td>
+                    <td class="center">87</td>
+                    <td class="center">97</td>
+                    <td class="center">95</td>
+                    <td class="center">91</td>
+                    <td class="center">87</td>
+                    <td class="center">89</td>
+                    <td class="center">87</td>
+                    <td class="center">98</td>
+                    <td class="center">98</td>
+                    <td class="center">80</td>
+                </tr>
+                <tr>
+                    <td class="center">12</td>
+                    <td class="center">Coğrafiya</td>
+                    <td class="center">Ağamalıyev Rauf X.</td>
+                    <td class="center">48</td>
+                    <td class="center">44</td>
+                    <td class="center">50</td>
+                    <td class="center">58</td>
+                    <td class="center">93</td>
+                    <td class="center">56</td>
+                    <td class="center">47</td>
+                    <td class="center">42</td>
+                    <td class="center">69</td>
+                    <td class="center">68</td>
+                    <td class="center">71</td>
+                </tr>
+            </table>
+            <p> <b> Təhsil müəssisəsinin direktoru : </b> <ins>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins> </p>
+            <p> <b> Dərsin müəllimi : </b> <ins>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins></p>
+        </div>
+    </div>
+</ng-container>
+<ng-container #studentCommon *ngIf="reportDetailType==2">
+    <div class="report-detail">
+        <div class="report-detail-header">
+            <div class="report-detail-title">
+                <img src="assets/icons/report-icon.svg" alt="report-icon">
+                <h2>Şagirdin yekun nəticələri</h2>
+            </div>
+            <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+        </div>
+
+        <div class="report-detail-content">
+            <h2 class="center"> <ins> Şuşa Dövlət məktəbi </ins> </h2>
+            <h3 class="center">2020/2021 - ci təhsil ilinin yekun nəticələri barədə</h3>
+            <h2 class="center">Məlumat</h2>
+            <p> <b> Dərsin adı : </b> Azərbaycan dili</p>
+            <p> <b>Müəllim : </b> Abdullayeva Sevda Y.</p>
+            <p> <b> Sinif : </b> 7c </p>
+            <table>
+                <tr>
+                    <th rowspan="3">N</th>
+                    <th rowspan="3">Tələbənin adı</th>
+                    <th colspan="5">I yarımil</th>
+                    <th colspan="5">II yarımil</th>
+                    <th rowspan="3">Yekun</th>
+                </tr>
+                <tr>
+                    <th colspan="3">&nbsp;&nbsp;Kiçik summativ qiymətləndirmə&nbsp;&nbsp;</th>
+                    <th rowspan="2">&nbsp;&nbsp;BSQ&nbsp;&nbsp;</th>
+                    <th rowspan="2">Yarım- <br> illik</th>
+                    <th colspan="3">&nbsp;&nbsp;Kiçik summativ qiymətləndirmə&nbsp;&nbsp;</th>
+                    <th rowspan="2">&nbsp;&nbsp;BSQ&nbsp;&nbsp;</th>
+                    <th rowspan="2">Yarım- <br> illik</th>
+                </tr>
+                <tr>
+                    <th>KSQ-1</th>
+                    <th>KSQ-2</th>
+                    <th>KSQ-3</th>
+                    <th>KSQ-1</th>
+                    <th>KSQ-2</th>
+                    <th>KSQ-3</th>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">Abbaszadə Gursel Üzeyir</td>
+                    <td class="center">45</td>
+                    <td class="center">50</td>
+                    <td class="center">40</td>
+                    <td class="center">70</td>
+                    <td class="center">85</td>
+                    <td class="center">35</td>
+                    <td class="center">45</td>
+                    <td class="center">50</td>
+                    <td class="center">60</td>
+                    <td class="center">72</td>
+                    <td class="center">79</td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td class="center">Adıgözəlova Leyla Şahin</td>
+                    <td class="center">42</td>
+                    <td class="center">48</td>
+                    <td class="center">47</td>
+                    <td class="center">58</td>
+                    <td class="center">77</td>
+                    <td class="center">44</td>
+                    <td class="center">26</td>
+                    <td class="center">30</td>
+                    <td class="center">48</td>
+                    <td class="center">74</td>
+                    <td class="center">76</td>
+                </tr>
+                <tr>
+                    <td class="center">3</td>
+                    <td class="center">Ağamətov İqramin Elxan</td>
+                    <td class="center">68</td>
+                    <td class="center">65</td>
+                    <td class="center">60</td>
+                    <td class="center">60</td>
+                    <td class="center">98</td>
+                    <td class="center">48</td>
+                    <td class="center">67</td>
+                    <td class="center">74</td>
+                    <td class="center">70</td>
+                    <td class="center">86</td>
+                    <td class="center">92</td>
+                </tr>
+                <tr>
+                    <td class="center">4</td>
+                    <td class="center">Dadaşova Aynur Ceyhun</td>
+                    <td class="center">74</td>
+                    <td class="center">47</td>
+                    <td class="center">49</td>
+                    <td class="center">58</td>
+                    <td class="center">90</td>
+                    <td class="center">47</td>
+                    <td class="center">47</td>
+                    <td class="center">52</td>
+                    <td class="center">69</td>
+                    <td class="center">86</td>
+                    <td class="center">84</td>
+                </tr>
+                <tr>
+                    <td class="center">5</td>
+                    <td class="center">Əliyev Cavid Tərlan</td>
+                    <td class="center">69</td>
+                    <td class="center">60</td>
+                    <td class="center">78</td>
+                    <td class="center">87</td>
+                    <td class="center">99</td>
+                    <td class="center">74</td>
+                    <td class="center">70</td>
+                    <td class="center">77</td>
+                    <td class="center">73</td>
+                    <td class="center">74</td>
+                    <td class="center">75</td>
+                </tr>
+                <tr>
+                    <td class="center">6</td>
+                    <td class="center">Əsəd Aytəkin Fariz</td>
+                    <td class="center">70</td>
+                    <td class="center">79</td>
+                    <td class="center">62</td>
+                    <td class="center">74</td>
+                    <td class="center">87</td>
+                    <td class="center">95</td>
+                    <td class="center">89</td>
+                    <td class="center">88</td>
+                    <td class="center">87</td>
+                    <td class="center">75</td>
+                    <td class="center">85</td>
+                </tr>
+                <tr>
+                    <td class="center">7</td>
+                    <td class="center">Fərzəliyeva Fidan Fərzəli</td>
+                    <td class="center">74</td>
+                    <td class="center">47</td>
+                    <td class="center">49</td>
+                    <td class="center">69</td>
+                    <td class="center">84</td>
+                    <td class="center">47</td>
+                    <td class="center">47</td>
+                    <td class="center">54</td>
+                    <td class="center">69</td>
+                    <td class="center">71</td>
+                    <td class="center">86</td>
+                </tr>
+                <tr>
+                    <td class="center">8</td>
+                    <td class="center">Hacımuradov Üzeyir Nazim</td>
+                    <td class="center">71</td>
+                    <td class="center">47</td>
+                    <td class="center">49</td>
+                    <td class="center">58</td>
+                    <td class="center">82</td>
+                    <td class="center">87</td>
+                    <td class="center">69</td>
+                    <td class="center">52</td>
+                    <td class="center">67</td>
+                    <td class="center">76</td>
+                    <td class="center">83</td>
+                </tr>
+                <tr>
+                    <td class="center">9</td>
+                    <td class="center">Həsənov Fariz Fazil</td>
+                    <td class="center">48</td>
+                    <td class="center">44</td>
+                    <td class="center">50</td>
+                    <td class="center">58</td>
+                    <td class="center">94</td>
+                    <td class="center">56</td>
+                    <td class="center">47</td>
+                    <td class="center">42</td>
+                    <td class="center">69</td>
+                    <td class="center">84</td>
+                    <td class="center">88</td>
+                </tr>
+                <tr>
+                    <td class="center">10</td>
+                    <td class="center">Mahmudzadə Xumar Əlisəfa</td>
+                    <td class="center">48</td>
+                    <td class="center">64</td>
+                    <td class="center">50</td>
+                    <td class="center">78</td>
+                    <td class="center">78</td>
+                    <td class="center">55</td>
+                    <td class="center">44</td>
+                    <td class="center">65</td>
+                    <td class="center">70</td>
+                    <td class="center">78</td>
+                    <td class="center">87</td>
+                </tr>
+                <tr>
+                    <td class="center">11</td>
+                    <td class="center">Mamedzadə Əli Sübhan</td>
+                    <td class="center">48</td>
+                    <td class="center">71</td>
+                    <td class="center">50</td>
+                    <td class="center">58</td>
+                    <td class="center">87</td>
+                    <td class="center">56</td>
+                    <td class="center">45</td>
+                    <td class="center">72</td>
+                    <td class="center">69</td>
+                    <td class="center">75</td>
+                    <td class="center">81</td>
+                </tr>
+                <tr>
+                    <td class="center">12</td>
+                    <td class="center">Mehdizadə Sahil Elçin</td>
+                    <td class="center">48</td>
+                    <td class="center">89</td>
+                    <td class="center">80</td>
+                    <td class="center">60</td>
+                    <td class="center">87</td>
+                    <td class="center">56</td>
+                    <td class="center">64</td>
+                    <td class="center">42</td>
+                    <td class="center">75</td>
+                    <td class="center">74</td>
+                    <td class="center">88</td>
+                </tr>
+                <tr>
+                    <td class="center">13</td>
+                    <td class="center">Mehralıyev Tunar Nazim</td>
+                    <td class="center">49</td>
+                    <td class="center">41</td>
+                    <td class="center">50</td>
+                    <td class="center">69</td>
+                    <td class="center">87</td>
+                    <td class="center">68</td>
+                    <td class="center">47</td>
+                    <td class="center">54</td>
+                    <td class="center">69</td>
+                    <td class="center">87</td>
+                    <td class="center">82</td>
+                </tr>
+                <tr>
+                    <td class="center">14</td>
+                    <td class="center">Mirzalıyeva Elvina Rasim</td>
+                    <td class="center">98</td>
+                    <td class="center">87</td>
+                    <td class="center">97</td>
+                    <td class="center">95</td>
+                    <td class="center">91</td>
+                    <td class="center">87</td>
+                    <td class="center">89</td>
+                    <td class="center">87</td>
+                    <td class="center">98</td>
+                    <td class="center">98</td>
+                    <td class="center">80</td>
+                </tr>
+                <tr>
+                    <td class="center">15</td>
+                    <td class="center">Musalı Fuad Fərmayıl</td>
+                    <td class="center">48</td>
+                    <td class="center">44</td>
+                    <td class="center">50</td>
+                    <td class="center">58</td>
+                    <td class="center">93</td>
+                    <td class="center">56</td>
+                    <td class="center">47</td>
+                    <td class="center">42</td>
+                    <td class="center">69</td>
+                    <td class="center">68</td>
+                    <td class="center">71</td>
+                </tr>
+                <tr>
+                    <td class="center">16</td>
+                    <td class="center">Novruzov Nurlan Rasim</td>
+                    <td class="center">68</td>
+                    <td class="center">47</td>
+                    <td class="center">50</td>
+                    <td class="center">59</td>
+                    <td class="center">87</td>
+                    <td class="center">57</td>
+                    <td class="center">36</td>
+                    <td class="center">42</td>
+                    <td class="center">74</td>
+                    <td class="center">82</td>
+                    <td class="center">76</td>
+                </tr>
+                <tr>
+                    <td class="center">17</td>
+                    <td class="center">Qasımov Teymur Habil</td>
+                    <td class="center">64</td>
+                    <td class="center">47</td>
+                    <td class="center">58</td>
+                    <td class="center">58</td>
+                    <td class="center">89</td>
+                    <td class="center">57</td>
+                    <td class="center">65</td>
+                    <td class="center">36</td>
+                    <td class="center">87</td>
+                    <td class="center">92</td>
+                    <td class="center">84</td>
+                </tr>
+            </table>
+            <p> <b> Təhsil müəssisəsinin direktoru : </b> <ins>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins></p>
+            <p> <b> Dərsin müəllimi : </b> <ins>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins></p>
+        </div>
+    </div>
+</ng-container>
+<ng-container #studentAge *ngIf="reportDetailType==3">
+    <div class="report-detail">
+        <div class="report-detail-header">
+            <div class="report-detail-title">
+                <img src="assets/icons/report-icon.svg" alt="report-icon">
+                <h2>Şagirdin yaşlarına görə</h2>
+            </div>
+            <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+        </div>
+
+        <div class="report-detail-content d-flex justify-content-center">
+            <app-report-pie-chart></app-report-pie-chart>
+        </div>
+    </div>
+</ng-container>

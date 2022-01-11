@@ -1,0 +1,33 @@
+<div class="main-room-add-update-dialog-content">
+    <form class="form-area" [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="main-room-add-update-dialog-content-header">
+            <h2>Otaq əlavə et</h2>
+            <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+        </div>
+        <div class="main-room-add-update-dialog-content-body">
+            <div class="form-group">
+                <mat-select placeholder="Konfransın növü" formControlName="conferenceType">
+                    <mat-option *ngFor="let dictionary of dictionaries" [value]="dictionary.id">
+                        {{dictionary.name}}
+                    </mat-option>
+                </mat-select>
+                <div *ngIf="submitted && f.conferenceType.errors" class="text-danger">
+                    <div *ngIf="f.conferenceType.errors.required">Konfrans növü boş ola bilməz</div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <input formControlName="name" type="text" placeholder="Otağın adı">
+                <div *ngIf="submitted && f.name.errors" class="text-danger">
+                    <div *ngIf="f.name.errors.required">Otaq adı boş ola bilməz</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-room-add-update-dialog-content-footer">
+            <button class="form-btn save" type="submit">Yadda saxla</button>
+            <button (click)="closeModal()" class="form-btn cancel">İmtina</button>
+        </div>
+    </form>
+
+</div>

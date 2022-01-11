@@ -1,0 +1,80 @@
+<ng-container *ngIf="!bannerMain">
+    <div class="banner" style="background-image: url(assets/img/{{bgImage}});">
+        <img class="banner-img" src="assets/img/{{img}}.svg" alt="">
+        <div *ngIf="withInput" class="banner-input">
+            <input (keyup)="search($event)" type="text" placeholder="Axtar">
+        </div>
+        <div *ngIf="!withInput" class="banner-text-area">
+            <div class="row">
+                <div class="offset-lg-6 col-lg-6">
+                    <div [ngClass]="{'banner-text':!studentPlan,'student-plan-text':studentPlan}">
+                        <h2>{{bannerTextTitle}}</h2>
+                        <p>{{bannerTextContent}}</p>
+                    </div>
+                    <div *ngIf="studentPlan" class="banner-student-plan-action">
+                        <a href="#">
+                            <img src="assets/icons/student-plan-action.svg" alt="">
+                            Tədris planına baxın
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div *ngIf='withAction' class="banner-actions">
+            <div class="banner-action-item">
+                <a href=# (click)="changeAction($event)">
+                    <div class="banner-action" [ngStyle]="{'background-color':actionColor}">
+                        <img src="assets/icons/plus.svg" alt="plus-icon">
+                    </div>
+                    {{actionText1}}
+                </a>
+            </div>
+            <div class="banner-action-item">
+                <a href="#" (click)="updateAction($event)">
+                    <div class="banner-action" [ngStyle]="{'background-color':actionColor}">
+                        <img src="assets/icons/refresh.svg" alt="refresh-icon">
+                    </div>
+                    {{actionText2}}
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="bannerMain">
+    <div class="banner main-banner" style="background-image: url(assets/img/{{bgImage}});">
+        <ng-container *ngIf="bannerMain">
+            <div *ngIf="(userInfo$|async)!=null" class="banner-user-profile">
+                <img [src]="userFilePath + (userInfo$|async)?.photoFilePath" alt="">
+                <div class="banner-user-info">
+                    <h2>{{(userInfo$|async)?.firstname+" "+(userInfo$|async)?.lastname}}</h2>
+                    <p>{{(userInfo$|async)?.account.role.value.az}}</p>
+                </div>
+            </div>
+        </ng-container>
+        <img class="banner-img" [ngClass]="{'banner-main-img':bannerMain}" src="assets/img/{{img}}.svg" alt="">
+        <div *ngIf="withInput" class="banner-input main-input">
+            <input (keyup)="search($event)" type="text" placeholder="Axtar">
+        </div>
+        <div *ngIf="!withInput" class="banner-text-area">
+            <div class="row">
+                <div class="offset-lg-6 col-lg-6">
+                    <div class="banner-text">
+                        <h2>{{bannerTextTitle}}</h2>
+                        <p>{{bannerTextContent}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf='withAction' class="banner-actions main-action">
+            <div class="banner-action-item">
+                <a href=# (click)="changeAction($event)">
+                    <div class="banner-action">
+                        <img src="assets/icons/plus.svg" alt="plus-icon">
+                    </div>
+                    {{actionText1}}
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-container>

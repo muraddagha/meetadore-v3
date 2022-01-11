@@ -1,0 +1,151 @@
+@import "/src/assets/scss/utilities";
+@import "/src/assets/scss/bootstrap-custom";
+@import "/src/assets/scss/mat-menu";
+@import "/src/assets/scss/components";
+
+.code-date-area {
+  column-gap: 10px;
+}
+.code {
+  background-color: rgba(196, 196, 196, 1);
+  border-radius: 4px;
+  padding: 1px 10px;
+}
+.date {
+  color: rgba(189, 189, 189, 1);
+}
+.status {
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+.wait {
+  background-color: rgba(242, 242, 242, 1);
+}
+.review {
+  background-color: rgba(242, 221, 156, 1);
+}
+.reject {
+  background-color: rgba(249, 177, 177, 1);
+}
+.accept {
+  background-color: rgba(159, 219, 238, 1);
+}
+.prepared {
+  background-color: rgba(205, 249, 223, 1);
+}
+.common-border {
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+}
+.module-content {
+  margin-bottom: 15px;
+  .module-item {
+    padding: 10px 8px;
+    border-bottom: 2px solid #f2f2f2;
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+    &.support {
+      &.active {
+        background-color: rgba(86, 204, 242, 0.15);
+      }
+    }
+    &.about {
+      &.active {
+        background-color: rgba(47, 46, 65, 0.15);
+      }
+    }
+  }
+}
+.module-item-top {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.scroll {
+  max-height: 500px;
+  margin-top: 15px;
+}
+.report-detail-dialog {
+  max-width: 99vw !important;
+  .mat-dialog-container {
+    width: 100vw;
+    height: 99vh;
+    border-radius: 0 !important;
+    border: 1px solid;
+  }
+}
+.content-big {
+  display: block;
+}
+.content-small {
+  display: none;
+}
+.support-filter {
+  margin-top: 15px;
+  select {
+    background-color: rgba(242, 201, 76, 0.15);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 13px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.filter-select-area {
+  display: flex;
+  column-gap: 15px;
+  .filter-select {
+    width: 100%;
+  }
+}
+
+div.ngx-mat-timepicker-dialog > mat-dialog-container.mat-dialog-container .mat-dialog-content {
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  ngx-mat-timepicker-content {
+    width: 100%;
+    .timepicker__main-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+div.ngx-mat-timepicker-dialog > mat-dialog-container.mat-dialog-container div[mat-dialog-actions] {
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-big {
+    display: none;
+  }
+  .content-small {
+    display: block;
+  }
+}
+.modules-item-big {
+  display: none;
+}
+.modules-item-mobile {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .modules-item-big {
+    display: block;
+  }
+  .modules-item-mobile {
+    display: none;
+  }
+  .main-scroll {
+    height: calc(100vh - #{sum(56px, 60px, 160px, 45px, 5px, 7)});
+  }
+  .main-scroll-with-small-nav {
+    height: calc(100vh - #{sum(56px, 60px, 160px, 38px, 60px, 5px, 7)});
+  }
+}

@@ -1,0 +1,78 @@
+.student-plan {
+    .student-plan-content {
+        background: #ffffff;
+        border-radius: 5px;
+        height: 100%;
+        .student-plan-lesson-info {
+            background-color: rgba(242, 201, 76, 0.1);
+            border-radius: 5px;
+            padding: 15px;
+            min-height: 400px;
+            .student-plan-lesson-info-header {
+                text-align: center;
+                h2 {
+                    font-size: 24px;
+                }
+                a {
+                    font-size: 12px;
+                    background-color: #2f80ed;
+                    padding: 3px 8px;
+                    color: white;
+                    border-radius: 3px;
+                }
+            }
+            .student-plan-lesson-info-content {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+                .lesson-info-teacher,
+                .lesson-info-students,
+                .lesson-info-indicators {
+                    h6 {
+                        font-size: 12px;
+                        margin-bottom: 3px;
+                    }
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+                .lesson-info-students {
+                    .lesson-info-students-link {
+                        display: flex;
+                        column-gap: 15px;
+                        align-items: center;
+                        a {
+                            color: rgba(47, 128, 237, 1);
+                            font-size: 10px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .lesson-info-indicators {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 25px;
+                    .lesson-info-indicators-item {
+                        display: flex;
+                        column-gap: 50px;
+                        align-items: center;
+                        h2 {
+                            width: 100px;
+                        }
+                        .lesson-info-indicators-item-points {
+                            display: flex;
+                            align-items: center;
+                            font-size: 18px;
+                            column-gap: 15px;
+                            font-weight: 600;
+                            span {
+                                color: rgba(224, 224, 224, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

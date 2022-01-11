@@ -1,0 +1,7 @@
+@import "/src/assets/scss/utilities";
+:host {
+    .main-scroll {
+        margin-top: 15px;
+        height: calc(100vh - #{sum(56px, 160px, 20px)}) !important;
+    }
+}

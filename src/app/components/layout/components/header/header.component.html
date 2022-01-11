@@ -1,0 +1,53 @@
+<header>
+    <div class="container-fluid">
+        <div class="header-area">
+            <div class="header-logo">
+                <img [src]="baseUrl+'api/get/logo'" alt="logo" onerror="this.src='assets/img/logo.png'">
+            </div>
+            <div class="header-nav-area">
+                <app-header-nav [modules]="modules"></app-header-nav>
+            </div>
+            <div class="header-user-area">
+                <app-header-user-notification [user]="user" [userProfilePhoto]="userProfilePhoto">
+                </app-header-user-notification>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- <header>
+    <div class="container-fluid">
+        <div class="header" style="width: 100%">
+            <div class="header__icon">
+                <img class="header__icon-img" src="assets/img/logo.png" />
+                <span class="header__icon-org"></span>
+            </div>
+            <app-top-sidebar></app-top-sidebar>
+            <div style="display: flex; position: relative; z-index: 2">
+                <div class="header__user">
+                    <div class="header__user-icon">
+                        <div class="header__user-icon--menu">
+                            <span class="header__user-icon--text">Murad Mammadov</span>
+                            <img crossOrigin="anonymous" src="" alt="pp" />
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-btn">
+                    <img src="assets/icons/main-modules/notifications.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- <mat-menu #subMenu="matMenu" xPosition="before">
+    <button
+      (click)="onOpenProfileDialog()"
+      routerLinkActive="active"
+      mat-menu-item
+    >
+      {{ '~profile' | translate }}
+    </button>
+    <button (click)="onLogout()" mat-menu-item>{{ '~leave' | translate }}</button>
+  </mat-menu>  -->

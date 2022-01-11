@@ -1,0 +1,31 @@
+export interface IAnnouncementModel {
+  createUserId: string;
+  createUserPositionNameRu: string;
+  updateDate: string;
+  endDate: string;
+  createUserPositionNameAz: string;
+  createUserOrgNameEn: string;
+  title: string;
+  content: string;
+  userGroupId: string;
+  createUserPositionNameEn: string;
+  id: string;
+  createUserPositionName: string;
+  createDate: string;
+  contentRu: string;
+  createUserOrgName: string;
+  updateUserId: string;
+  titleAz: string;
+  active: string;
+  createUserPhotoFileId: string;
+  contentAz: string;
+  titleRu: string;
+  createUserPositionId: string;
+  createUserOrgNameRu: string;
+  titleEn: string;
+  createUserFullname: string;
+  createUserOrgNameAz: string;
+  contentEn: string;
+  startDate: string;
+  fileId: string;
+}

@@ -1,0 +1,42 @@
+<app-banner [withInput]="true" [withAction]='false' (updateDataEvent)="getMaterials($event)"
+    bgImage="banner-support-bg.svg" img='support-img'></app-banner>
+<ng-container *ngIf="loader">
+    <app-loader></app-loader>
+</ng-container>
+<ng-container *ngIf="!loader">
+    <ng-container *ngIf="materials==null">
+        <app-no-data></app-no-data>
+    </ng-container>
+    <ng-container *ngIf="materials!=null">
+        <perfect-scrollbar class="scroll scroll-height-2">
+            <div class="module-content common-border">
+                <div *ngFor="let material of materials" class="module-item support">
+                    <ng-container *ngIf="material.materialTypeId!=videoType">
+                        <a class="d-flex align-items-center justify-content-between" target="blank"
+                            href="https://demo.empro.az/AuthRest3/api/get/file/{{material.fileId}}">
+                            <p>
+                                {{material.trainingTopic}}
+                            </p>
+                            <div class="status" [ngClass]="material.materialTypeName|lowercase">
+                                <span>{{material.materialTypeName}}</span>
+                            </div>
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="material.materialTypeId==videoType">
+                        <a class="d-flex align-items-center justify-content-between"
+                            (click)="showModal($event,material.fileId)" href="#">
+                            <p>
+                                {{material.trainingTopic}}
+                            </p>
+                            <div class="status" [ngClass]="material.materialTypeName|lowercase">
+                                <span>{{material.materialTypeName}}</span>
+                            </div>
+                        </a>
+                    </ng-container>
+
+
+                </div>
+            </div>
+        </perfect-scrollbar>
+    </ng-container>
+</ng-container>

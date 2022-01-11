@@ -1,0 +1,14 @@
+<div class="main-today-schedule" *ngIf="homeworks!=null">
+    <div class="main-right-container">
+        <div class="main-right-header">
+            <h2 class="main-right-title">Ev tapşrıqları</h2>
+        </div>
+        <div class="main-right-body">
+            <ngx-skeleton-loader *ngIf="loader" count="10"></ngx-skeleton-loader>
+            <ng-container *ngIf="!loader">
+                <app-main-homework-item *ngFor="let homework of homeworks" [homework]="homework">
+                </app-main-homework-item>
+            </ng-container>
+        </div>
+    </div>
+</div>

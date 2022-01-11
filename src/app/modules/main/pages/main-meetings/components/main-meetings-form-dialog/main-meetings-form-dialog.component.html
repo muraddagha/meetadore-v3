@@ -1,0 +1,84 @@
+<div class="main-room-add-update-dialog-content">
+    <form class="form-area" [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="main-room-add-update-dialog-content-header">
+            <h2>Görüş əlavə et</h2>
+            <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+        </div>
+        <div class="main-room-add-update-dialog-content-body">
+            <div class="form-group">
+                <input formControlName="title" type="text" placeholder="Görüşün Başlığı">
+                <div *ngIf="submitted && f.title.errors" class="text-danger">
+                    <div *ngIf="f.title.errors.required">Görüşün başlığı boş ola bilməz</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group form-date" style="margin-bottom: 0px !important;">
+                            <input formControlName="startDate" matInput [matDatepicker]="picker" placeholder="Tarix">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            <div *ngIf="submitted && f.startDate.errors" class="text-danger">
+                                <div *ngIf="f.startDate.errors.required">Tarix boş ola bilməz</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group" style="margin-bottom: 0px !important;">
+                            <input [ngxMatTimepicker]="timepicker" formControlName="startTime" placeholder="Saat"
+                                [format]=24>
+
+                            <ngx-mat-timepicker #timepicker></ngx-mat-timepicker>
+                            <div *ngIf="submitted && f.startTime.errors" class="text-danger">
+                                <div *ngIf="f.startTime.errors.required">Saat boş ola bilməz</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <mat-select placeholder="Növ" formControlName="type">
+                    <mat-option *ngFor="let type of types" [value]="type.id">
+                        {{type.name}}
+                    </mat-option>
+                </mat-select>
+                <div *ngIf="submitted && f.type.errors" class="text-danger">
+                    <div *ngIf="f.type.errors.required">Növ boş ola bilməz</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <mat-select (ngModelChange)="getConferenceTypes($event)" placeholder="Görüşün növü"
+                    formControlName="meetingType">
+                    <mat-option *ngFor="let meetingType of meetingTypes" [value]="meetingType.id">
+                        {{meetingType.name}}
+                    </mat-option>
+                </mat-select>
+                <div *ngIf="submitted && f.meetingType.errors" class="text-danger">
+                    <div *ngIf="f.meetingType.errors.required">Görüşün növü boş ola bilməz</div>
+                </div>
+            </div>
+            <div *ngIf="showConferenceTypes" class="form-group">
+                <mat-select placeholder="Konfransın növü" formControlName="conferenceType">
+                    <mat-option *ngFor="let conferenceType of conferenceTypes" [value]="conferenceType.id">
+                        {{conferenceType.name}}
+                    </mat-option>
+                </mat-select>
+                <div *ngIf="submitted && f.conferenceType.errors" class="text-danger">
+                    <div *ngIf="f.conferenceType.errors.required">Konfrans növü boş ola bilməz</div>
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <textarea placeholder="Qeyd"></textarea>
+                <div *ngIf="submitted && f.name.errors" class="text-danger">
+                    <div *ngIf="f.name.errors.required">Otaq adı boş ola bilməz</div>
+                </div>
+            </div> -->
+        </div>
+        <div class="main-room-add-update-dialog-content-footer">
+            <button class="form-btn save" type="submit">Yadda saxla</button>
+            <button (click)="closeModal()" class="form-btn cancel">İmtina</button>
+        </div>
+    </form>
+
+</div>

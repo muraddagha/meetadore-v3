@@ -1,0 +1,12 @@
+<div class="main-content-item-area">
+    <ng-container *ngIf="connections!=null">
+        <ngx-skeleton-loader *ngIf="loader" count="10"></ngx-skeleton-loader>
+        <ng-container *ngIf="!loader">
+            <app-main-connection-item *ngFor="let connection of connections" [connection]="connection">
+            </app-main-connection-item>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="connections==null">
+        <app-no-data img="assets/img/nodata-main.svg"></app-no-data>
+    </ng-container>
+</div>

@@ -1,0 +1,19 @@
+<div class="banner-area">
+    <app-banner [bannerMain]="true" [withInput]="false" [withAction]="false" bgImage="banner-main-bg.svg"
+        img='banner-main-img'></app-banner>
+</div>
+<div class="main-content">
+    <ngx-skeleton-loader *ngIf="loader && announcementLists==null" count="10"></ngx-skeleton-loader>
+    <perfect-scrollbar class="main-scroll">
+        <ng-container *ngIf="!loader && announcementLists!=null">
+            <div class="main-content-item-area">
+                <app-main-news-item *ngFor="let announcement of announcementLists" [announcement]="announcement">
+                </app-main-news-item>
+            </div>
+
+        </ng-container>
+    </perfect-scrollbar>
+
+
+
+</div>

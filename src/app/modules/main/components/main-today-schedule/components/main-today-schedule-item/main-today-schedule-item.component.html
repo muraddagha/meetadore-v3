@@ -1,0 +1,18 @@
+<div class="main-right-item" [ngStyle]="{'background-color':course?.cardColor}">
+    <div class="main-right-item-content">
+        <div class="main-right-item-info">
+            <h2>{{course?.subjectName}}</h2>
+            <p>{{course?.teacherFullname}}</p>
+        </div>
+        <div class="main-right-item-info">
+            <h4>Otaq nömrəsi: <span class="small-info room">{{course?.roomName}}</span></h4>
+            <p>Saat:
+                <span class="small-info"
+                    [ngStyle]="{'background-color':course?.meetingStatusColor}">{{course?.startTime}}
+                    <ng-container *ngIf="course?.meetingStatus=='finished'">(Bitib)</ng-container>
+                    <ng-container *ngIf="course?.meetingStatus=='active'">(Başlayıb)</ng-container>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>

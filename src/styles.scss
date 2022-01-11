@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "/src/assets/scss/common-tools";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "~angular-notifier/styles.scss";
+:root {
+  --primary-default: #3f51b5;
+  --primary-dark: #020202;
+  --primary-coral: #eb5772;
+  --accent-default: #ffd740;
+  --background-default: #edeef0;
+  // --background-light: #ffffff;
+  // --background-secondary: #535392;
+  --text-default: #212121;
+  --text-light: #666666;
+  --text-white: #ffffff;
+  --header-default: #212121;
+  --header-dark: #414b6d;
+  --header-light: #3a4362;
+  --header-height: 60px;
+  --base-gutter: 15px;
+  // --admin-border-radius: 0.313rem;
+  // --admin-padding: 0.5rem;
+  // --admin-sidebar-width: 275px;
+  // --admin-navigation-width: 64px;
+  // --profile-edit-z-index: 10;
+  // --university-color: #16a085;
+  // --branch-color: #2980b9;
+  // --faculty-color: #8c7ae6;
+  // --department-color: #0fb9b1;
+  // --speciality-color: #7f8c8d;
+  // --specialization-color: #f39c12;
+  --font-default: "Roboto";
+  --font-bold: "roboto-bold";
+}
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.ps__rail-y {
+  background-color: white !important;
+}
+@media only screen and(min-width:768px) {
+  html {
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+}
+.legend-items {
+  padding-block: 20px !important;
+}
+.advanced-pie-legend .total-value {
+  margin-bottom: 10px !important;
+}

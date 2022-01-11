@@ -1,0 +1,55 @@
+<div class="add-question-form">
+    <ng-container *ngIf="updateData==null">
+        <div class="add-question-form-header d-flex align-items-center justify-content-between">
+            <h2 class="text-center">Yeni Sorğu</h2>
+            <button (click)="cancelAddQuestion()">
+                <img src="assets/icons/close.svg" alt="close-btn">
+            </button>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="support-filter mb-3">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <select formControlName="typeId">
+                            <option disabled value="{{null}}">Seçin</option>
+                            <option value="{{type.id}}" *ngFor="let type of questionTypes">{{type.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <textarea formControlName="content"></textarea>
+            <div class="add-question-btn-area d-flex justify-content-center">
+                <button class="add-btn submit" type="submit">Göndər</button>
+                <button class="add-btn cancel" (click)="cancelAddQuestion($event)">Ləğv et</button>
+            </div>
+        </form>
+    </ng-container>
+    <ng-container *ngIf="updateData!=null">
+        <div class="add-question-form-header d-flex align-items-center justify-content-between">
+            <h2 class="text-center">Sorğunu yenilə</h2>
+            <button (click)="cancelAddQuestion()">
+                <img src="assets/icons/close.svg" alt="close-btn">
+            </button>
+        </div>
+
+        <form [formGroup]="updateForm" (ngSubmit)="submit()">
+            <div class="support-filter mb-3">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <select formControlName="statusId">
+                            <option disabled value="{{null}}">Seçin</option>
+                            <option value="{{status.id}}" *ngFor="let status of statuses">{{status.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <textarea formControlName="content"></textarea>
+            <div class="add-question-btn-area d-flex justify-content-center">
+                <button class="add-btn submit" type="submit">Göndər</button>
+                <button class="add-btn cancel" (click)="cancelAddQuestion($event)">Ləğv et</button>
+            </div>
+        </form>
+    </ng-container>
+</div>

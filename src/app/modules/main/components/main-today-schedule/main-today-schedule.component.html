@@ -1,0 +1,15 @@
+<div class="main-today-schedule" *ngIf="studentCourses!=null">
+    <div class="main-right-container">
+        <div class="main-right-header">
+            <h2 class="main-right-title">Günün dərs cədvəli</h2>
+            <span class="date">{{today}}</span>
+        </div>
+        <div class="main-right-body">
+            <ngx-skeleton-loader *ngIf="loader" count="10"></ngx-skeleton-loader>
+            <ng-container *ngIf="!loader">
+                <app-main-today-schedule-item *ngFor="let course of studentCourses" [course]="course">
+                </app-main-today-schedule-item>
+            </ng-container>
+        </div>
+    </div>
+</div>

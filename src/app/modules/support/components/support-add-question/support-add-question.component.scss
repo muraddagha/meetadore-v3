@@ -1,0 +1,64 @@
+.add-question-form {
+  margin-top: 13px;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+  .add-question-form-header {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    h2 {
+      margin-bottom: 0;
+    }
+    button {
+      width: inherit;
+    }
+  }
+  textarea {
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.5);
+    border: none;
+    border-radius: 5px;
+    min-height: 40vh;
+    padding-inline: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .add-question-btn-area {
+    column-gap: 15px;
+    margin-top: 80px;
+    .add-btn {
+      padding: 8px 45px;
+      border-radius: 5px;
+      &.cancel {
+        background-color: rgba(235, 87, 87, 0.3);
+      }
+      &.submit {
+        background-color: rgba(33, 150, 83, 0.3);
+      }
+    }
+    button {
+      width: inherit !important;
+    }
+    a {
+      color: black;
+    }
+  }
+}
+.support-filter {
+  select {
+    background-color: rgba(242, 201, 76, 0.15);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 13px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+@media only screen and(min-width:768px) {
+  .add-question-form {
+    width: 600px;
+  }
+}

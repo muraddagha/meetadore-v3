@@ -1,0 +1,61 @@
+.module-content {
+    .module-item {
+        padding: 0;
+        margin-bottom: 15px;
+        position: relative;
+        &:first-child {
+            margin-top: 15px;
+        }
+        border: none;
+        .module-item-content {
+            .studen-plan-lesson-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .student-plan-lesson {
+                    p {
+                        font-weight: 300;
+                    }
+                    h2,
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .student-plan-all {
+                border-radius: 5px;
+                background-color: rgba(187, 107, 217, 0.1);
+                padding: 15px;
+                height: 60px;
+                h2,
+                h4,
+                h6 {
+                    line-height: 18.75px;
+                }
+                h6 {
+                    font-size: 9px;
+                }
+                h4 {
+                    font-size: 16px;
+                }
+            }
+            [class*="col-lg-2"]:nth-child(2) {
+                padding-inline: 15px;
+            }
+            [class*="col-lg-2"]:last-child {
+                padding-left: 15px;
+            }
+        }
+        &.active {
+            &::before {
+                content: "";
+                background-color: #ffc000;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 8px;
+                border-radius: 5px 0 0 5px;
+            }
+        }
+    }
+}

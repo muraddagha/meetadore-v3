@@ -1,0 +1,42 @@
+.main-sidebar-area {
+    display: flex;
+    align-items: center;
+    background: rgba(242, 242, 242, 1);
+    border-radius: 5px;
+    margin-bottom: var(--base-gutter);
+    a {
+        height: 67px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        flex-basis: 100%;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 4px;
+        img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 6px;
+        }
+        h2 {
+            font-size: 12px;
+            margin-bottom: 0 !important;
+            line-height: 10.55px;
+        }
+        &.active {
+            background: #e0e0e0;
+        }
+        &:hover {
+            background: #e0e0e0;
+        }
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}

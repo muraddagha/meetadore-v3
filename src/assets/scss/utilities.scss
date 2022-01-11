@@ -1,0 +1,52 @@
+button {
+  border: none;
+  text-align: inherit;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+main {
+  padding-bottom: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+a {
+  text-decoration: none !important;
+}
+p {
+  margin: 0 !important;
+  word-break: break-all;
+}
+.scroll-height {
+  max-height: 60vh !important;
+}
+.scroll-height-2 {
+  max-height: 68vh !important;
+}
+// html {
+//   overflow-y: scroll !important;
+// }
+@function sum($numbers...) {
+  $sum: 0;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+
+@media only screen and (min-height: 890px) {
+  .scroll-height {
+    max-height: 71vh !important;
+  }
+}

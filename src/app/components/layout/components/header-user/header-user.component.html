@@ -1,0 +1,18 @@
+<button class="header-user-btn" mat-button [matMenuTriggerFor]="menu">
+    {{user?.firstname}}
+    <img *ngIf="user?.photoFilePath!=null" [src]="userProfilePhoto" alt="pp">
+</button>
+<mat-menu #menu="matMenu">
+    <ul class="mat-popup">
+        <li class="header-nav-popup-item">
+            <a href="#">
+                Profil
+            </a>
+        </li>
+        <li class="header-nav-popup-item">
+            <a href="#">
+                Çıxış
+            </a>
+        </li>
+    </ul>
+</mat-menu>

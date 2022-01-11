@@ -1,0 +1,32 @@
+.report-detail {
+  padding: 12px 20px;
+  .report-detail-header {
+    display: flex;
+    justify-content: space-between;
+    .report-detail-title {
+      display: flex;
+      column-gap: 15px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    button {
+      width: initial;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  margin-inline: auto;
+}
+.report-detail-content {
+  text-align: center;
+}

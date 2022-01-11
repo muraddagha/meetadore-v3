@@ -1,0 +1,11 @@
+.module-content {
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  .module-item {
+    padding: 10px 8px;
+    border-bottom: 2px solid #f2f2f2;
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+}

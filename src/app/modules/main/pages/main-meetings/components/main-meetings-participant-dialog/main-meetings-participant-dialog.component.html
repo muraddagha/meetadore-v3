@@ -1,0 +1,92 @@
+<div class="details common-border">
+    <div class="details-header">
+        <div class="details-user">
+            <div class="details-user-info">
+                <img src="assets/img/board-pp.png" alt="detail-pp">
+                <span>{{meeting.moderatorFullname}}</span>
+            </div>
+            <div class="details-user-close">
+                <button (click)="closeModal()"><img src="assets/icons/close.svg" alt="close-icon"></button>
+            </div>
+        </div>
+        <h2 class="details-title">
+            {{meeting.title}}
+        </h2>
+        <h4 class="date text-center">
+            {{meeting.startDate}} {{meeting.startTime}}
+        </h4>
+        <div class="meeting-types">
+            <button>{{meeting.typeName}}</button>
+            <button>{{meeting.meetingTypeName}}</button>
+        </div>
+        <div class="details-tab-actions common-border">
+            <button class="active">İştirakçılar</button>
+            <button>Agenda</button>
+            <button>Əlavələr</button>
+            <button *ngIf="meeting.meetingStatus!='OLD'&&meeting.meetingStatus!=='DECLINE'" class="text-end" mat-button
+                [matMenuTriggerFor]="menu"><img src="assets/img/main/info-icon.svg" alt="info-icon"></button>
+        </div>
+        <div class="details-user-actions" *ngIf="addParticipantAction">
+            <form class="form-area" [formGroup]="form" (ngSubmit)="submit()">
+                <mat-select placeholder="Kontaktlar" formControlName="userId">
+                    <mat-option>
+                        <ngx-mat-select-search placeholderLabel="İştirakçı axtar"></ngx-mat-select-search>
+                    </mat-option>
+                    <mat-option *ngFor="let filter of meetingFilters" [value]="filter.id">
+                        {{filter.userFullname}}
+                    </mat-option>
+                </mat-select>
+                <button type="submit" class="add-user-btn">Əlavə et</button>
+            </form>
+
+        </div>
+    </div>
+    <ng-container *ngIf="participants!=null">
+        <ngx-skeleton-loader *ngIf="loader" count="10"></ngx-skeleton-loader>
+        <perfect-scrollbar *ngIf="!loader" class="main-scroll">
+            <div class="details-body common-border">
+                <ng-container>
+                    <div *ngFor="let participant of participants" class="details-body-item">
+                        <div class="details-body-item-info">
+                            <span>1</span>
+                            <div class="details-img-content">
+                                <img src="assets/img/board-item-img.png" alt="board-item">
+                                <p>{{participant.userFullname}}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="participant.userId!=participant.createUserId" class="details-body-item-action">
+                            <button *ngIf="meeting.meetingStatus!='OLD'&&meeting.meetingStatus!=='DECLINE'"
+                                (click)="removeParticipant(participant)">
+                                <img src="assets/img/main/remove-participant.svg" alt="remove-participant">
+                            </button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </perfect-scrollbar>
+    </ng-container>
+    <ng-container *ngIf="participants==null">
+        <app-no-data img="assets/img/nodata-main.svg"></app-no-data>
+    </ng-container>
+
+
+</div>
+<mat-menu #menu="matMenu">
+    <div class="mat-menu-body">
+        <ul class="mat-popup">
+            <li>
+                <button (click)="openUpdateModal()">Redaktə et</button>
+            </li>
+            <li>
+                <button (click)="removeMeeting()">Görüşü sil</button>
+            </li>
+            <li>
+                <button (click)="addParticipant()">İştirakçı əlavə et</button>
+            </li>
+            <!-- <li>
+                <button>Linki kopyala</button>
+            </li> -->
+        </ul>
+    </div>
+
+</mat-menu>

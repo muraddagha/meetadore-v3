@@ -1,0 +1,15 @@
+<ng-container *ngIf="loader">
+    <app-loader></app-loader>
+</ng-container>
+<ng-container *ngIf="!loader">
+    <ng-container *ngIf="content!=null">
+        <perfect-scrollbar class="main-scroll">
+            <div innerHtml="{{content}}" class="module-content common-border p-2">
+            </div>
+        </perfect-scrollbar>
+
+    </ng-container>
+    <ng-container *ngIf="content==null">
+        <app-no-data></app-no-data>
+    </ng-container>
+</ng-container>

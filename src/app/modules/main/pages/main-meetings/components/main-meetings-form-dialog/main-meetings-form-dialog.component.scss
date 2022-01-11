@@ -1,0 +1,33 @@
+.main-room-add-update-dialog-content {
+    .main-room-add-update-dialog-content-header {
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(242, 242, 242, 1);
+        padding: var(--base-gutter);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            width: initial;
+        }
+    }
+    .main-room-add-update-dialog-content-body {
+        max-width: 275px;
+        margin-inline: auto;
+    }
+    .main-room-add-update-dialog-content-footer {
+        margin-top: var(--base-gutter);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: var(--base-gutter);
+        padding: var(--base-gutter);
+    }
+}
+.form-date {
+    position: relative;
+    mat-datepicker-toggle {
+        position: absolute;
+        right: 5px;
+        top: -2px;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="content">
+    <div class="wrapper">
+        <div class="col-xl-3 content-big">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-xl-6 col-md-7 col-12">
+            <div class="content-small">
+                <app-sidebar></app-sidebar>
+            </div>
+            <app-banner [withInput]="true" [withAction]='false' bgImage='reports-bg.svg' img="report-img"></app-banner>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-xl-3 col-md-5 col-12"></div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+div {
+  padding-top: 10px;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    margin-bottom: 5px !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+  }
+  .d-flex {
+    padding: 0 !important;
+  }
+}

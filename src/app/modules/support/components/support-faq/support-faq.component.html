@@ -1,0 +1,25 @@
+<app-banner [withInput]="true" [withAction]='false' (updateDataEvent)="getFaqs($event)" bgImage="banner-support-bg.svg"
+    img='support-img'></app-banner>
+<ng-container *ngIf="loader">
+    <app-loader></app-loader>
+</ng-container>
+<ng-container *ngIf="!loader">
+    <ng-container *ngIf="faqs==null">
+        <app-no-data></app-no-data>
+    </ng-container>
+    <ng-container *ngIf="faqs!=null">
+        <perfect-scrollbar class="scroll scroll-height-2">
+
+            <div class="module-content common-border">
+                <button *ngFor="let faq of faqs" (click)="getFaqDetail(faq)"
+                    class="modules-item-big module-item support" [ngClass]="{'active':activeFaqId==faq.id}">
+                    <p>{{faq.question}}</p>
+                </button>
+                <button *ngFor="let faq of faqs" (click)="getFaqDetail(faq,true)"
+                    class="modules-item-mobile module-item support" [ngClass]="{'active':activeFaqId==faq.id}">
+                    <p>{{faq.question}}</p>
+                </button>
+            </div>
+        </perfect-scrollbar>
+    </ng-container>
+</ng-container>
